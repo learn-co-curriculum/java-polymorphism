@@ -7,13 +7,14 @@
 
 ## Introduction
 
-Polymorphism means "many forms". In Java,
-polymorphism means the ability of an object or method to take many forms.
+Polymorphism means "many forms".
+In Java, polymorphism is the ability for an object or method to take on many forms.
+
 Java supports **runtime/dynamic** polymorphism and **compile-time/static**
 polymorphism.  Runtime polymorphism is achieved through **method overriding**,
 while compile-time polymorphism is achieved through **method overloading**.
 
-## Code Along
+## Code Along 
 
 Fork and clone this lesson.  The project defines two interfaces `Swimmable`
 and `Flyable`, along with classes `Fish`, `Airplane` and `Duck`.
@@ -55,6 +56,7 @@ public class Fish implements Swimmable {
 
 ```java
 public class Airplane implements Flyable {
+    
     private String manufacturer;
 
     public Airplane(String manufacturer) {
@@ -100,6 +102,7 @@ called **polymorphic**, since it can reference objects of different types.
 
 ```java
 public class Main {
+    
     public static void main(String[] args) {
         // Declare polymorphic variables (interface types)
         Swimmable swimmer;
@@ -129,8 +132,8 @@ public class Main {
         flyer = duck;
         // Dynamic binding to Duck fly() method
         flyer.fly();
-
     }
+    
 }
 ```
 
@@ -140,9 +143,11 @@ public class Main {
 
 Runtime polymorphism means the behavior of a method invocation
 can vary depending on the actual type of the object referenced.
+
 Java uses **dynamic binding** for the method calls `swimmer.swim()`
-and `flyer.fly()`, determining which method `swim()` and `fly()` method
-to execute based on the type of the object referenced by `swimmer` and `flyer`.
+and `flyer.fly()`. Dynamic binding will determine which
+`swim()` and `fly()` method to execute based on the type
+of object referenced by `swimmer` and `flyer`.
 
 The program prints:
 
@@ -187,7 +192,7 @@ an `Airplane` or a `Duck` object.
 
 ## Runtime Polymorphism and Inheritance
 
-We also encounter polymorphic variables references
+We also encounter polymorphic variable references
 and dynamic method binding when working with class inheritance.
 
 Recall the `Person` class:
@@ -224,6 +229,7 @@ public class Teacher extends Person {
 
 ```java
 public class Student extends Person {
+    
     private String favoriteSubject;
 
     public String getFavoriteSubject() {return favoriteSubject;}
@@ -245,7 +251,7 @@ public class Student extends Person {
 
 Since a subclass inherits the fields and methods of the superclass,
 we can declare a variable having the superclass type and assign it to a
-subclass instance.
+subclass instance.  
 
 For example, a variable `person` declared with
 the type `Person` can reference an instance of `Person`, `Teacher`,
@@ -278,7 +284,7 @@ wake up early and study all day
 ```
 
 
-## Compile-time polymorphism
+## Compile-time polymorphism 
 
 **Compile-time polymorphism** occurs when a class defines two methods with the
 same name but different parameter lists.  Java uses **static or compile-time binding**
