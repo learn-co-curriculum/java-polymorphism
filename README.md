@@ -21,9 +21,9 @@ and `Flyable`, along with classes `Fish`, `Airplane` and `Duck`.
 Since the majority of fish don't fly, `Fish` and `Duck` implement the `Swimmable` interface,
 while `Duck` and `Airplane` implement `Flyable` .
 
-![multiple interfaces](https://curriculum-content.s3.amazonaws.com/6677/pillars/swim_fly.png)
+![polymorphism interfaces uml](https://curriculum-content.s3.amazonaws.com/6677/pillars/polymorphism_interface_uml.png)
 
-
+Abstract methods `swim()` and `fly()` are displayed with italic font in the UML diagram.
 
 ```java
 public interface Swimmable {
